@@ -1,12 +1,12 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
-function TextExample(props) {
+function BasicExample(props) {
   return (
-    <Card style={{ width: '13rem' }} >
+    <Card style={{ width: '13rem' }}>
       <Card.Body>
         <Card.Title>
-          <PersonAddIcon/>
+          {props.icon}
         </Card.Title>
         <Card.Subtitle className="mx-auto">{props.name}</Card.Subtitle>
       </Card.Body>
@@ -14,4 +14,4 @@ function TextExample(props) {
   );
 }
 
-export default TextExample;
+export default BasicExample;
