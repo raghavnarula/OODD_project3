@@ -1,13 +1,13 @@
-//import EtcPage from './components/EtcPage';
-//import AddParticipants from './components/AddParticipants';
-import AssignReviews from './components/AssignReviews';
-import AssignGrades from './components/AssignGrades';
+import CreateTable from './components/CreateTable';
 
 function App() {
+
+  
   return (
     <>
-      <AssignGrades/>
-    </>)
-    }
+    <CreateTable/>
+    </>
+  )
+  }
 
 export default App
