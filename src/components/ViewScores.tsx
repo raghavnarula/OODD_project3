@@ -2,10 +2,10 @@ import React from 'react'
 
 type Props = {}
 
-const ViewScores = (props: Props) => {
+const ViewReports = (props: Props) => {
   return (
-    <div>ViewScores</div>
+    <div>ViewReports</div>
   )
 }
 
-export default ViewScores
+export default ViewReports

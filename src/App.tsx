@@ -1,9 +1,11 @@
-import EtcPage from './components/EtcPage';
+//import EtcPage from './components/EtcPage';
+//import AddParticipants from './components/AddParticipants';
+import AssignReviews from './components/AssignReviews';
 
 function App() {
   return (
     <>
-      <EtcPage/>
+      <AssignReviews/>
     </>)
     }
 
