@@ -1,7 +1,11 @@
-import { ReportSharp, Reviews, ScoreSharp } from "@mui/icons-material"
+import React from 'react'
 
-assign Reviews
-view submission
-viewScores
-view Reports
-viewdeletejobs
+type Props = {}
+
+const AddParticipants = (props: Props) => {
+  return (
+    <div>AddParticipants</div>
+  )
+}
+
+export default AddParticipants
