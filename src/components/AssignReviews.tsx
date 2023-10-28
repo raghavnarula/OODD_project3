@@ -44,7 +44,7 @@ const AssignReviews = (props: Props) => {
             "Back",
           ].map((link, index, array) => (
             <React.Fragment key={index}>
-              <a style={{color: 'red'}}href="#">{link}</a>
+              <a style={{color: 'brown'}}href="#">{link}</a>
               {index < array.length - 1 ? ' | ' : null}
             </React.Fragment>
           ))}
