@@ -8,6 +8,7 @@ export const Table = () => {
         <th>Team Name</th>
         <th>Email</th>
         <th>Name</th>
+        <th>Actions</th>
       </thead>
       {info.map((personDetails, index) => (
         <TableSection personDetails={personDetails} index={index} />
