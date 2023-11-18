@@ -1,13 +1,9 @@
-import CreateTable from './components/CreateTable';
+import { Table } from "./components/Table/Table";
 
-function App() {
-
-  
+const App = () => {
   return (
-    <>
-    <CreateTable/>
-    </>
+    <div><Table/></div>
   )
-  }
+}
 
 export default App
