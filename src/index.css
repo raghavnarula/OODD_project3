@@ -143,15 +143,16 @@ thead {
 }
 
 td {
-  padding: 0 20px;
+  /* padding: 0 20px; */
+  /* margin-left:20px; */
 }
 th {
-  width: 190px;
+  width: 250px;
   border-top: 1px solid var(--gh-grey-2);
   padding: 10px 20px;
 }
 tr {
-  width: 190px;
+  width: 250px;
   height: 40px;
   border-top: 0.025rem solid var(--gh-grey-1);
 }

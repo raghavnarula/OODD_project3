@@ -4,7 +4,7 @@ export const TableRow = ({ personDetails }) => {
     <>
     {personDetails.map((person, index) => (
       <tr key={index}>
-        <td>{index+1}</td>
+        <td style={{paddingLeft:'20px'}}>{index+1}</td>
         <td></td>
         <td>{person.email}</td>
         <td>{person.name}</td>
