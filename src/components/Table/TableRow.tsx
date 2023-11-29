@@ -1,13 +1,23 @@
-
-export const TableRow = ({ personDetails }) => {
+import {GiCrossMark} from 'react-icons/gi';
+export const TableRow = ({ teamName,handleDeleteUser,personDetails }) => {
   return (
     <>
-    {personDetails.map((person, index) => (
-      <tr key={index}>
-        <td style={{paddingLeft:'20px'}}>{index+1}</td>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Unity ID</b></td>
+      <td></td>
+    </tr>
+    {personDetails.map((person, id) => (
+      <tr key={id}>
+        <td style={{paddingLeft:'20px'}}>{id+1}</td>
         <td></td>
-        <td>{person.email}</td>
-        <td>{person.name}</td>
+        <td>{person.unityId}</td>
+        <td>
+        <button onClick={() => handleDeleteUser(teamName, person.id)}>
+              <GiCrossMark color="red" size={20}/>
+        </button>
+        </td>
       </tr>
     ))}
     </>

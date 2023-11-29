@@ -1,11 +1,12 @@
 import { ExpendableButton } from "./ExpendableButton";
 import { TableRow } from "./TableRow";
-import useOpenController from "../../hooks/useOpenController";
+import useOpenController from "../../hooks/useOpenController"
 import {FcPlus} from 'react-icons/fc';
 import {GiCrossMark} from 'react-icons/gi';
-import {BiSolidPencil} from 'react-icons/bi';
+import {MdOutlineEdit} from 'react-icons/md';
 
-export const TableSection = ({ personDetails, index }) => {
+export const TableSection = ({  handleAddNewUser,handleDeleteUser,handleDeleteTeam,handleEditTeamName,personDetails,index }): React.ReactNode => {
+  
   const { isOpen, toggle } = useOpenController(false);
   return (
     <tbody>
@@ -14,20 +15,26 @@ export const TableSection = ({ personDetails, index }) => {
           <ExpendableButton isOpen={isOpen} toggle={toggle} />
         </td>
         <td>
-          <b>Team : {index}</b>
+        
+          <b>{index}</b>
         </td>
-        <td></td>
         <td></td>
         <td>
-          {/* Button */}
-          <FcPlus size={20}/>
-          <span> </span>
-          <GiCrossMark color="red" size={20}/>
-          <span> </span>
-          <BiSolidPencil color="yellow" size={20}></BiSolidPencil>
-        </td>
+            {/* Button */}
+            <button onClick={() => handleAddNewUser(index)}>
+              <FcPlus size={20}/>
+            </button>
+            <span> </span>
+            <button onClick={() => handleDeleteTeam(index)}>
+            <GiCrossMark color="red" size={20}/>
+            </button>
+            <span> </span>
+            <button onClick={() => handleEditTeamName(index, prompt('Enter new team name') || index)}>
+              <MdOutlineEdit style={{color: '#bf721f'}} size={20}></MdOutlineEdit>
+            </button>
+          </td>
       </tr>
-      {isOpen && <TableRow personDetails={personDetails} />}
+      {isOpen && <TableRow handleDeleteUser={handleDeleteUser} personDetails={personDetails} teamName={index}/>}
     </tbody>
   );
 };
